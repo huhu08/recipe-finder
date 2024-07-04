@@ -7,11 +7,13 @@ import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { MealComponent } from './meal/meal.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-   
+    MealComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,7 @@ import { MealComponent } from './meal/meal.component';
     MatCardModule,
     MatIconModule,
     MatInputModule,
-    MealComponent
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
