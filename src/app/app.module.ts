@@ -8,11 +8,13 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import { MealComponent } from './meal/meal.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RecipeComponent } from './recipe/recipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MealComponent,
+    RecipeComponent,
 
   ],
   imports: [
