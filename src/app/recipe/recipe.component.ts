@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Meal} from '../meal';
+import { MealService } from '../meal.service';
+// import { HttpClient } from '@angular/common/http';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
 
 @Component({
   selector: 'app-recipe',
@@ -7,9 +13,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeComponent implements OnInit {
 
-  constructor() { }
-
+  
   ngOnInit(): void {
+
+  }
+
+  meals: Meal[] = [];
+  data:any;
+  constructor(private mealService:MealService) { }
+ search(){
+    // this.mealService.getMeal(meal).subscribe(
+    //   meal => this.meal=meal
+    // );
+  this.mealService.getMeals().subscribe(data => {
+    this.meals = data;
+    console.log(data);
+  });
   }
 
 }

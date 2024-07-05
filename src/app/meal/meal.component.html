@@ -1,6 +1,5 @@
-<div *ngFor="let meal of meals">
+<div *ngFor="let meal of data">
     <h2>{{ meal.strMeal }}</h2>
-    <img [src]="meal.strMealThumb" alt="{{ meal.strMeal }}">
     <p>{{ meal.strInstructions }}</p>
     <ul>
       <li>{{ meal.strIngredient1 }}</li>
@@ -8,7 +7,5 @@
       <li>{{ meal.strIngredient3 }}</li>
       <li>{{ meal.strIngredient4 }}</li>
       <li>{{ meal.strIngredient5 }}</li>
-      <!-- Add more ingredients as necessary -->
     </ul>
-    <a [href]="meal.strYoutube" target="_blank">Watch on YouTube</a>
   </div>

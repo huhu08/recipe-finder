@@ -1,1 +1,37 @@
-<p>recipe works!</p>
+ <p>recipe works!</p>
+<!-- <div *ngFor="let meal of meals">
+    
+   <h2>{{ meal.strMeal }}</h2>
+    <p>{{ meal.strInstructions }}</p>
+    <ul>
+      <li>{{ meal.strIngredient1 }}</li>
+      <li>{{ meal.strIngredient2 }}</li>
+      <li>{{ meal.strIngredient3 }}</li>
+      <li>{{ meal.strIngredient4 }}</li>
+      <li>{{ meal.strIngredient5 }}</li>
+
+    
+   </div> 
+   -->
+   <div *ngIf="meals.length === 0">
+    <p>No meals found.</p>
+  </div>
+  <div *ngFor="let meal of meals">
+    <h2>{{ meal.strMeal }}</h2>
+    <img [src]="meal.strMealThumb" alt="{{ meal.strMeal }}">
+    <p>{{ meal.strInstructions }}</p>
+    <ul>
+      <li *ngIf="meal.strIngredient1">{{ meal.strIngredient1 }}</li>
+      <li *ngIf="meal.strIngredient2">{{ meal.strIngredient2 }}</li>
+      <li *ngIf="meal.strIngredient3">{{ meal.strIngredient3 }}</li>
+      <li *ngIf="meal.strIngredient4">{{ meal.strIngredient4 }}</li>
+      <li *ngIf="meal.strIngredient5">{{ meal.strIngredient5 }}</li>
+      <li *ngIf="meal.strIngredient6">{{ meal.strIngredient6 }}</li>
+      <li *ngIf="meal.strIngredient7">{{ meal.strIngredient7 }}</li>
+      <li *ngIf="meal.strIngredient8">{{ meal.strIngredient8 }}</li>
+      <li *ngIf="meal.strIngredient9">{{ meal.strIngredient9 }}</li>
+      <li *ngIf="meal.strIngredient10">{{ meal.strIngredient10 }}</li>
+      <!-- Add more ingredients as necessary -->
+    </ul>
+    <a [href]="meal.strYoutube" target="_blank">Watch on YouTube</a>
+  </div>
