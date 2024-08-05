@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meal} from '../meal';
 import { MealService } from '../meal.service';
-// import { HttpClient } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
